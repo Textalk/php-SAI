@@ -1,0 +1,7 @@
+{
+  "name": "textalk/php-sai",
+  "version": "0.1.3",
+  "autoload": {
+    "classmap": ["lib/"]
+  }
+}
