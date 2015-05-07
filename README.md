@@ -14,10 +14,12 @@ So far, includes interfaces to stub:
 Usage
 -----
 
-1. Typehint the interface: `public function myFooBar(SAI\Curl $curl) {…`
-2. Let your applications bootstrap instantiate a system-implementation:
+1. Let your applications bootstrap instantiate a system-implementation:
    `$curl = new SAI\System\Curl;`
-3. Use the mock-classes in test: `$curl = new SAI\Mock\Curl;`
+2. Require a SAI instance in classes needing to call curl, system methods, get info from the
+   request or affect the response: `public function myFooBar(SAI\Curl $curl) {…`
+3. Use the SAI instance for the calls: `$ch = $curl->init('http://example.com/');`;
+4. Use the mock-classes in test: `$curl = new SAI\Mock\Curl;`
 
 
 Developer install
