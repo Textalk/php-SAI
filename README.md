@@ -10,10 +10,18 @@ So far, includes interfaces to stub:
 * Response
 * System
 
+
+Usage
+-----
+
+1. Typehint the interface: `public function myFooBar(SAI\Curl $curl) {…`
+2. Let your applications bootstrap instantiate a system-implementation:
+   `$curl = new SAI\System\Curl;`
+3. Use the mock-classes in test: `$curl = new SAI\Mock\Curl;`
+
+
 Developer install
 -----------------
-
-Development depends on php, php-curl and php-xdebug.
 
 ```bash
 # Will get composer, install dependencies and run tests

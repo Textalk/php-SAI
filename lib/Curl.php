@@ -5,7 +5,7 @@ namespace SAI;
 /**
  * Interface for PHP cURL functions.
  **/
-interface CurlInterface {
+interface Curl {
   public function close($ch);
   public function copy_handle($ch);
   public function errno($ch);

@@ -6,7 +6,7 @@ namespace SAI\System;
  * Implements the cURL interface by simply delegating calls to the built-in cURL functions..
  * See http://www.php.net/manual/en/book.curl.php
  */
-class Curl implements \SAI\CurlInterface {
+class Curl implements \SAI\Curl {
   public function close($ch) {
     curl_close($ch);
   }

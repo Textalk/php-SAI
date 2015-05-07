@@ -6,8 +6,7 @@ namespace SAI\Mock;
  * Stubs the cURL interface without issuing any PHP requests.
  */
 
-
-class Curl implements \SAI\CurlInterface {
+class Curl implements \SAI\Curl {
   private $_lastHandle = -1;
 
   private $_mapOptionCounts = array();
