@@ -1,7 +1,12 @@
 {
   "name": "textalk/php-sai",
-  "version": "0.1.3",
   "autoload": {
-    "classmap": ["lib/"]
+    "psr-4": {
+      "SAI\\": "lib/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.1.*",
+    "satooshi/php-coveralls": "dev-master"
   }
 }
