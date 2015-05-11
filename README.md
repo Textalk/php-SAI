@@ -14,12 +14,13 @@ So far, includes interfaces to stub:
 Usage
 -----
 
-1. Let your applications bootstrap instantiate a system-implementation:
+1. Add it as a dependency in require in composer.json: `"textalk/php-sai": "1.0"`
+2. Let your applications bootstrap instantiate a system-implementation:
    `$curl = new SAI\System\Curl;`
-2. Require a SAI instance in classes needing to call curl, system methods, get info from the
+3. Require a SAI instance in classes needing to call curl, system methods, get info from the
    request or affect the response: `public function myFooBar(SAI\Curl $curl) {…`
-3. Use the SAI instance for the calls: `$ch = $curl->init('http://example.com/');`;
-4. Use the mock-classes in test: `$curl = new SAI\Mock\Curl;`
+4. Use the SAI instance for the calls: `$ch = $curl->init('http://example.com/');`;
+5. Use the mock-classes in test: `$curl = new SAI\Mock\Curl;`
 
 
 Developer install
@@ -29,6 +30,22 @@ Developer install
 # Will get composer, install dependencies and run tests
 make test
 ```
+
+Changelog
+---------
+
+1.0.0 - **BREAKING CHANGE**
+
+* Namespaced to SAI:
+  * `SAI_CurlInterface` -> `SAI\Curl`
+  * `SAI_CurlStub`      -> `SAI\Mock\Curl`
+  * `SAI_Curl`          -> `SAI\System\Curl`
+* Licence and copyright clarified.
+* Added interface, mock and implementation for Request, Response and System.
+
+0.1.3
+
+* Added composer and packagist.
 
 
 Licence
