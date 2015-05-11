@@ -1,4 +1,5 @@
-Copyright (c) 2012, Martin Büttner <E-mail address>
+Copyright (c) 2012, Martin Büttner
+Copyright (c) 2015, Textalk AB <fredrik.liljegren@textalk.se>
 
 Permission to use, copy, modify, and/or distribute this software for 
 any purpose with or without fee is hereby granted, provided that the 
