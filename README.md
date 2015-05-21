@@ -34,6 +34,11 @@ make test
 Changelog
 ---------
 
+1.1.0
+
+* Added SAI\Response::setResponseCode.
+* Added unit tests for SAI\Mock\Response.
+
 1.0.0 - **BREAKING CHANGE**
 
 * Namespaced to SAI:
