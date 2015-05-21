@@ -22,7 +22,7 @@ interface Response {
    * Sets HTTP response code.
    * @param int $code The HTTP response code.
    */
-  public function setResponseCode($code = 200);
+  public function setResponseCode($code);
 
   public function setCookie(
     $name, $value, $expire = 0, $path = '/', $domain = null, $secure = false, $httponly = false

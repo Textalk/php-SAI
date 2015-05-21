@@ -4,13 +4,13 @@ namespace SAI\Mock;
 
 class Response implements \SAI\Response {
   public $headers = array(), $cookies = array(), $cookies_deleted = array();
-  public $output = '', $response_code = null;
+  public $output = '', $response_code = 200;
 
   public function setHeader($name, $value) {
     $this->headers[strtolower($name)] = $value;
   }
 
-  public function setResponseCode($code = 200) {
+  public function setResponseCode($code) {
     $this->response_code = $code;
   }
 
