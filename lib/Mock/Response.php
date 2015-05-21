@@ -10,7 +10,7 @@ class Response implements \SAI\Response {
     $this->headers[strtolower($name)] = $value;
   }
 
-  public function setResponseCode($code) {
+  public function setResponseCode($code = 200) {
     $this->response_code = $code;
   }
 

@@ -20,6 +20,9 @@ class MockResponseTest extends PHPUnit_Framework_TestCase {
       'HTTP/1.1 303 See Other',
       $this->response_mock->response_code
     );
+
+    $this->response_mock->setResponseCode();
+    $this->assertEquals(200, $this->response_mock->response_code);
   }
 
   public function testSetCookie() {
