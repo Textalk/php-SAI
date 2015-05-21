@@ -13,6 +13,10 @@ class Response implements \SAI\Response {
     header("$name: $value");
   }
 
+  public function setResponseCode($code) {
+    http_response_code($code);
+  }
+
   public function setCookie(
     $name, $value, $expire = 0, $path = null, $domain = null, $secure = false, $httponly = false
   ) {
