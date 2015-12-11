@@ -6,8 +6,16 @@ class Response implements \SAI\Response {
   public $headers = array(), $cookies = array(), $cookies_deleted = array();
   public $output = '', $response_code = 200;
 
-  public function setHeader($name, $value) {
-    $this->headers[strtolower($name)] = $value;
+  public function setHeader($name, $value, $replace = true) {
+    // Imitating the format you get from http_parse_headers
+    $key = strtolower($name);
+    if ($replace === false && isset($this->headers[$key])) {
+      if (!is_array($this->headers[$key])) {
+        $this->headers[$key] = array($this->headers[$key]);
+      }
+      $this->headers[$key][] = $value;
+    }
+    else $this->headers[$key] = $value;
   }
 
   public function setResponseCode($code) {
