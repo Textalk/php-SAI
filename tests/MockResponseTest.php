@@ -48,4 +48,17 @@ class MockResponseTest extends PHPUnit_Framework_TestCase {
       $this->response_mock->output
     );
   }
+
+  public function testMultipleHeaders() {
+    $this->response_mock->setHeader('set-cookie', 'foo=bar', false);
+    $this->response_mock->setHeader('set-cookie', 'baz=qux', false);
+
+    $this->assertEquals(array('foo=bar', 'baz=qux'), $this->response_mock->headers['set-cookie']);
+  }
+
+  public function testHeaderReplaceWithOnlyOne() {
+    $this->response_mock->setHeader('set-cookie', 'foo=bar', false);
+
+    $this->assertEquals('foo=bar', $this->response_mock->headers['set-cookie']);
+  }
 }

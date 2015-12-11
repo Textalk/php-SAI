@@ -34,6 +34,10 @@ make test
 Changelog
 ---------
 
+1.2.0
+
+* Added $replace flag to SAI\Response::setHeader (default true as in PHP header).
+
 1.1.0
 
 * Added SAI\Response::setResponseCode.

@@ -16,7 +16,7 @@ interface Response {
    * @param string $name
    * @param string $value
    */
-  public function setHeader($name, $value);
+  public function setHeader($name, $value, $replace = true);
 
   /**
    * Sets HTTP response code.

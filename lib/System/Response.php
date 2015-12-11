@@ -9,8 +9,8 @@ namespace SAI\System;
  * access.
  */
 class Response implements \SAI\Response {
-  public function setHeader($name, $value) {
-    header("$name: $value");
+  public function setHeader($name, $value, $replace = true) {
+    header("$name: $value", $replace);
   }
 
   public function setResponseCode($code) {
